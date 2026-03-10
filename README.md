@@ -1,3 +1,11 @@
+<!-- BADGES:START -->
+[![CI](https://github.com/POps-Rox/ref-scca-enclave-policy-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/POps-Rox/ref-scca-enclave-policy-starter/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/POps-Rox/ref-scca-enclave-policy-starter/pulls)
+[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/POps-Rox/ref-scca-enclave-policy-starter/graphs/commit-activity)
+[![Terraform](https://img.shields.io/badge/Terraform-%3E%3D1.5-623CE4.svg?logo=terraform)](https://www.terraform.io)
+<!-- BADGES:END -->
+
 # Azure NoOps Mission Enclave Policy starter #
 
 Azure NoOps Mission Enclave Policy starter is a highly opinionated Policy-as-Code (PaC) which IT oversight organizations can use to create a cloud management system to deploy Azure environments for their workloads and teams.
