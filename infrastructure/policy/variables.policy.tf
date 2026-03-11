@@ -60,7 +60,7 @@ variable "minimumDaysBeforeExpiration" {
 variable "listofPortsToDeny" {
   type        = list(number)
   description = "If specified, identifies the list of allowed ports."
-  default     = []  
+  default     = []
 }
 
 variable "listOfAllowedIPAddressesforNSGs" {
@@ -76,13 +76,13 @@ variable "policy_exemption_expires_on" {
   validation {
     condition     = can(regex("^[0-9]{4}-[0-9]{2}-[0-9]{2}$", var.policy_exemption_expires_on)) || var.policy_exemption_expires_on == ""
     error_message = "Value must be a valid date format."
-  }  
+  }
 }
 
 variable "workspaceRetentionDays" {
   type        = number
   description = "If specified, identifies the number of days to retain logs in the Log Analytics workspace."
-  default     = 30  
+  default     = 30
 }
 
 variable "budget_amount" {

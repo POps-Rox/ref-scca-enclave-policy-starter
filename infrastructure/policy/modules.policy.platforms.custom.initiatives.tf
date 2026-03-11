@@ -17,7 +17,7 @@ AUTHOR/S: jspinella
 # Configures all the Azure Key Vault settings and gaurdrails, such as Azure Key Vault Auditing, Purge Protection, and Soft Delete
 module "mod_platforms_configure_azure_key_vault_initiative" {
   source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
-  version                 = "~> 2.0" 
+  version                 = "~> 2.0"
   initiative_name         = "deploy_azure_key_vault_config"
   initiative_display_name = "Key Vault Governance"
   initiative_description  = "This policy set configures all the Azure Key Vault settings and guardrails, such as Azure Key Vault Auditing, Purge Protection, and Soft Delete"

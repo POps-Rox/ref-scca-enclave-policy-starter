@@ -65,7 +65,7 @@ variable "subscription_id_hub" {
   type        = string
   description = "If specified, identifies the subscription to deploy resources to. If not specified, the default subscription will be used."
   sensitive   = true
-  default = null
+  default     = null
   validation {
     condition     = can(regex("^[a-z0-9-]{36}$", var.subscription_id_hub)) || var.subscription_id_hub == ""
     error_message = "Value must be a valid Subscription ID (GUID)."

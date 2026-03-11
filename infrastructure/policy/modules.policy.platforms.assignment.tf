@@ -33,10 +33,10 @@ module "mod_platforms_configure_azure_key_vault_initiative_assignment" {
 
   # assignment parameters
   assignment_parameters = {
-    allowedIPAddresses = var.listOfAllowedIPAddresses, #  Allow only specific IP addresses to access the Key Vault
+    allowedIPAddresses          = var.listOfAllowedIPAddresses,    #  Allow only specific IP addresses to access the Key Vault
     minimumDaysBeforeExpiration = var.minimumDaysBeforeExpiration, #  Minimum number of days before a secret or key expires
   }
- 
+
   # 
   assignment_metadata = {
     version  = "1.0.0"
@@ -70,7 +70,7 @@ module "mod_platforms_configure_azure_storage_account_initiative_assignment" {
   role_definition_ids = [
     data.azurerm_role_definition.contributor.id
   ]
- 
+
   # 
   assignment_metadata = {
     version  = "1.0.0"

@@ -52,7 +52,7 @@ module "mod_deploy_defender_root_initiative" {
   # Populate member_definitions with a for loop (explicit)
   member_definitions = [
     module.mod_deploy_defender_root_definition["deploy_asc_security_contacts"].definition,
-    data.azurerm_policy_definition.deploy_export_to_law_for_mdfc_data,                                   # Deploy export to Log Analytics workspace for Microsoft Defender for Cloud data  
+    data.azurerm_policy_definition.deploy_export_to_law_for_mdfc_data, # Deploy export to Log Analytics workspace for Microsoft Defender for Cloud data  
   ]
 }
 

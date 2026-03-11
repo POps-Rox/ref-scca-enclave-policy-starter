@@ -52,8 +52,8 @@ module "mod_platforms_transport_logging_transport_initiative" {
 
   # Populate member_definitions with a for loop (explicit)
   member_definitions = [
-    module.mod_transport_deploy_provision_law_agent_custom_workspace_policy_definition.definition,   # Deploy Law Agent and Custom Workspace
-    module.mod_transport_audit_log_analytics_workspace_retention_policy_definition.definition,           # Audit Log Analytics Workspace Retention
+    module.mod_transport_deploy_provision_law_agent_custom_workspace_policy_definition.definition,                                                  # Deploy Law Agent and Custom Workspace
+    module.mod_transport_audit_log_analytics_workspace_retention_policy_definition.definition,                                                      # Audit Log Analytics Workspace Retention
     data.azurerm_policy_definition.deploy_configure_azure_log_analytics_workspaces_to_disable_public_network_access_for_log_ingestion_and_querying, # Deploy Configure Azure Log Analytics Workspaces to Disable Public Network Access for Log Ingestion and Querying
     data.azurerm_policy_definition.deploy_logging_by_category_group_for_Log_Analytics_workspaces,                                                   # Deploy Logging by Category Group for Log Analytics workspaces
   ]

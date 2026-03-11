@@ -21,8 +21,8 @@ module "mod_platforms_network_configurations_policy_definition" {
   version = "~> 2.0"
   for_each = toset([
     "deny_publicip",
-    "deny_mgmt_ports_from_internet",  
-    "deny_bastion_creation",  
+    "deny_mgmt_ports_from_internet",
+    "deny_bastion_creation",
     "deny_rdp_from_internet",
     "require_nsg_on_vnet",
   ])

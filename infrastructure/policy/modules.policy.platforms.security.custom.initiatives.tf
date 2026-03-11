@@ -27,11 +27,11 @@ module "mod_platforms_security_deploy_azure_monitor_baseline_initiative" {
 
   # Populate member_definitions with a for loop (explicit)
   member_definitions = [
-    module.mod_deploy_aa_totaljob_alert_root_definition.definition, # Azure Monitor Baseline Alerts for Service Health
-    module.mod_deploy_activitylog_la_del_root_definition.definition, # Azure Monitor Baseline Alerts for Service Health
-    module.mod_deploy_activitylog_la_keyregen_root_definition.definition,# Azure Monitor Baseline Alerts for Service Health
-    module.mod_deploy_rv_backup_alert_root_definition.definition,# Azure Monitor Baseline Alerts for Service Health
-    module.mod_deploy_sa_availability_alert_root_definition.definition,# Azure Monitor Baseline Alerts for Service Health
+    module.mod_deploy_aa_totaljob_alert_root_definition.definition,       # Azure Monitor Baseline Alerts for Service Health
+    module.mod_deploy_activitylog_la_del_root_definition.definition,      # Azure Monitor Baseline Alerts for Service Health
+    module.mod_deploy_activitylog_la_keyregen_root_definition.definition, # Azure Monitor Baseline Alerts for Service Health
+    module.mod_deploy_rv_backup_alert_root_definition.definition,         # Azure Monitor Baseline Alerts for Service Health
+    module.mod_deploy_sa_availability_alert_root_definition.definition,   # Azure Monitor Baseline Alerts for Service Health
   ]
 }
 
@@ -52,11 +52,11 @@ module "mod_platforms_security_configure_network_configuration_initiative" {
 
   # Populate member_definitions with a for loop (explicit)
   member_definitions = [
-    module.mod_platforms_network_configurations_policy_definition["deny_publicip"].definition, # Deny Public IP
+    module.mod_platforms_network_configurations_policy_definition["deny_publicip"].definition,                 # Deny Public IP
     module.mod_platforms_network_configurations_policy_definition["deny_mgmt_ports_from_internet"].definition, # Deny Management Ports from Internet
-    module.mod_platforms_network_configurations_policy_definition["deny_bastion_creation"].definition, # Deny Bastion Creation
-    module.mod_platforms_network_configurations_policy_definition["deny_rdp_from_internet"].definition, # Deny RDP from Internet
-    module.mod_platforms_network_configurations_policy_definition["require_nsg_on_vnet"].definition, # Require NSG on VNET
+    module.mod_platforms_network_configurations_policy_definition["deny_bastion_creation"].definition,         # Deny Bastion Creation
+    module.mod_platforms_network_configurations_policy_definition["deny_rdp_from_internet"].definition,        # Deny RDP from Internet
+    module.mod_platforms_network_configurations_policy_definition["require_nsg_on_vnet"].definition,           # Require NSG on VNET
     data.azurerm_policy_definition.audit_internet_traffic_should_be_routed_via_deployed_azure_firewall,
     data.azurerm_policy_definition.audit_subscription_should_configure_the_Azure_Firewall_Premium_to_provide_additional_layer_of_protection,
     data.azurerm_policy_definition.deploy_configure_virtual_network_to_enable_traffic_analytics,

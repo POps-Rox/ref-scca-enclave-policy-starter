@@ -19,7 +19,7 @@ AUTHOR/S: jspinella
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_general_root_definition" {
   source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version = "~> 2.0"  
+  version = "~> 2.0"
   for_each = toset([
     "audit_locks_on_networking",
   ])
@@ -38,9 +38,9 @@ module "mod_deploy_resource_diagnostic_setting_root_definition" {
   source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
-    "deploy_subscription_diagnostic_setting",  
-    "deploy_virtual_machine_diagnostic_setting",  
-    "deploy_public_ip_diagnostic_setting",  
+    "deploy_subscription_diagnostic_setting",
+    "deploy_virtual_machine_diagnostic_setting",
+    "deploy_public_ip_diagnostic_setting",
     "deploy_network_interface_diagnostic_setting",
     "deploy_logAnalytics_diagnostics_setting",
     "deploy_firewall_diagnostic_setting",
@@ -79,7 +79,7 @@ module "mod_deploy_defender_root_definition" {
   version = "~> 2.0"
   for_each = toset([
     "deploy_asc_security_contacts",
-    "deploy_export_asc_alerts_and_recom_to_law",   
+    "deploy_export_asc_alerts_and_recom_to_law",
   ])
   policy_def_name     = each.value
   policy_category     = "Security"
@@ -121,7 +121,7 @@ module "mod_deploy_sql_root_definition" {
   policy_def_name     = each.value
   policy_category     = "SQL"
   management_group_id = data.azurerm_management_group.root.id
-} 
+}
 
 ####################
 # Tags
@@ -144,43 +144,43 @@ module "mod_deploy_tags_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_aa_totaljob_alert_root_definition" {
-  source                 = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version                = "~> 2.0"
-  file_path              = "${path.cwd}/custompolicies/definitions/monitoring/deploy_aa_totaljob_alert.json"  
-  management_group_id    = data.azurerm_management_group.root.id
+  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  version             = "~> 2.0"
+  file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_aa_totaljob_alert.json"
+  management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_activitylog_la_del_root_definition" {
-  source                 = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version                = "~> 2.0"
-  file_path              = "${path.cwd}/custompolicies/definitions/monitoring/deploy_activitylog_la_workspace_del.json"  
-  management_group_id    = data.azurerm_management_group.root.id
+  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  version             = "~> 2.0"
+  file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_activitylog_la_workspace_del.json"
+  management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_activitylog_la_keyregen_root_definition" {
-  source                 = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version                = "~> 2.0"
-  file_path              = "${path.cwd}/custompolicies/definitions/monitoring/deploy_activitylog_la_workspace_keyregen.json"  
-  management_group_id    = data.azurerm_management_group.root.id
+  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  version             = "~> 2.0"
+  file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_activitylog_la_workspace_keyregen.json"
+  management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_rv_backup_alert_root_definition" {
-  source                 = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version                = "~> 2.0"
-  file_path              = "${path.cwd}/custompolicies/definitions/monitoring/modify_rsv_backuphealth_alert.json"  
-  management_group_id    = data.azurerm_management_group.root.id
+  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  version             = "~> 2.0"
+  file_path           = "${path.cwd}/custompolicies/definitions/monitoring/modify_rsv_backuphealth_alert.json"
+  management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_sa_availability_alert_root_definition" {
-  source                 = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version                = "~> 2.0"
-  file_path              = "${path.cwd}/custompolicies/definitions/monitoring/deploy_storageaccount_availability_alert.json"  
-  management_group_id    = data.azurerm_management_group.root.id
+  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  version             = "~> 2.0"
+  file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_storageaccount_availability_alert.json"
+  management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_audit_user_role_assignments_definition" {
-  source                 = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
-  version                = "~> 2.0"
-  file_path              = "${path.cwd}/custompolicies/definitions/aad/audit_user_role_assignments.json"  
-  management_group_id    = data.azurerm_management_group.root.id
+  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  version             = "~> 2.0"
+  file_path           = "${path.cwd}/custompolicies/definitions/aad/audit_user_role_assignments.json"
+  management_group_id = data.azurerm_management_group.root.id
 }
