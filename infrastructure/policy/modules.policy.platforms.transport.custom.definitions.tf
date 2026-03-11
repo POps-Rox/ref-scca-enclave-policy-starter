@@ -18,7 +18,6 @@ AUTHOR/S: jspinella
 
 module "mod_transport_deploy_provision_law_agent_custom_workspace_policy_definition" {
   source                 = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
-  version                = "~> 2.0"
   policy_def_name        = "deploy_provision_law_agent_custom_workspace"
   display_name           = "Deploy and provision Log Analytics agent with custom workspace"
   policy_def_description = "This policy enables Security Center's auto provisioning of the Log Analytics agent on your subscriptions with custom workspace."
@@ -28,7 +27,6 @@ module "mod_transport_deploy_provision_law_agent_custom_workspace_policy_definit
 
 module "mod_transport_audit_log_analytics_workspace_retention_policy_definition" {
   source                 = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
-  version                = "~> 2.0"
   policy_def_name        = "audit_log_analytics_workspace_retention"
   display_name           = "Audit Log Analytics Workspace Retention"
   policy_def_description = "This policy ensures that Log Analytics workspaces has a retention period."

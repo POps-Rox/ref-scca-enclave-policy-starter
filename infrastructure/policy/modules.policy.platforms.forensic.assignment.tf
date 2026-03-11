@@ -15,7 +15,6 @@ AUTHOR/S: jspinella
 # Deploy Network Policy Assignments
 module "mod_platforms_forensic_configure_network_configuration_initiative_assignment" {
   source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version             = "~> 2.0"
   initiative          = module.mod_platforms_forensic_configure_network_configuration_initiative.initiative
   assignment_scope    = data.azurerm_management_group.forensic.id
   assignment_location = var.default_location
@@ -63,7 +62,6 @@ module "mod_platforms_forensic_configure_network_configuration_initiative_assign
 # Deploy Key Vault Policy Assignments
 module "mod_platforms_forensic_deploy_azure_monitor_baseline_forensic_initiative_assignment" {
   source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version             = "~> 2.0"
   initiative          = module.mod_platforms_forensic_deploy_azure_monitor_baseline_initiative.initiative
   assignment_scope    = data.azurerm_management_group.forensic.id
   assignment_location = var.default_location

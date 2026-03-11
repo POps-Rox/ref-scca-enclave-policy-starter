@@ -19,7 +19,6 @@ AUTHOR/S: jspinella
 # Deploy General Policy Assignments
 module "mod_root_general_initiative_assignment" {
   source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version             = "~> 2.0"
   initiative          = module.mod_deploy_general_config_root_initiative.initiative
   assignment_scope    = data.azurerm_management_group.root.id
   assignment_location = var.default_location
@@ -56,7 +55,6 @@ module "mod_root_general_initiative_assignment" {
 ######################
 module "mod_root_configure_defender_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = module.mod_deploy_defender_root_initiative.initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -92,7 +90,6 @@ module "mod_root_configure_defender_initiative_assignment" {
 # Configure Microsoft Defender for Cloud plans.
 module "mod_root_deploy_configure_microsoft_defender_for_cloud_plans_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.deploy_configure_microsoft_defender_for_cloud_plans_initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -119,7 +116,6 @@ module "mod_root_deploy_configure_microsoft_defender_for_cloud_plans_initiative_
 # Deploy Microsoft Defender for Endpoint agent on applicable images.
 module "mod_root_preview_deploy_microsoft_defender_for_endpoint_agent_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.deploy_microsoft_defender_for_endpoint_agent_initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -146,7 +142,6 @@ module "mod_root_preview_deploy_microsoft_defender_for_endpoint_agent_initiative
 # Deploy Microsoft Defender for Databases.
 module "mod_root_preview_deploy_microsoft_defender_for_databases_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.deploy_microsoft_defender_for_databases_initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -177,7 +172,6 @@ module "mod_root_preview_deploy_microsoft_defender_for_databases_initiative_assi
 # Audit Public Network Access Initiative.
 module "mod_root_audit_public_networks_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.audit_public_network_access_initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -208,7 +202,6 @@ module "mod_root_audit_public_networks_initiative_assignment" {
 # Deploy Guest Configuration Policy Assignments
 /* module "mod_root_guest_configuration_initiative_assignment" {
   source                 = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version                = "~> 2.0"
   initiative             = module.mod_enforce_azure_compute_sec_benchmark_root_initiative.initiative
   assignment_scope       = data.azurerm_management_group.root.id
   
@@ -238,7 +231,6 @@ module "mod_root_audit_public_networks_initiative_assignment" {
 ##################
 module "mod_root_monitioring_diagnostics_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = module.mod_deploy_diagnostic_monitoring_root_initiative.initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -278,7 +270,6 @@ module "mod_root_monitioring_diagnostics_initiative_assignment" {
 # Deploy Enable Azure Monitor for VMs.
 module "mod_root_preview_deploy_azure_monitor_for_vm_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.deploy_enable_azure_monitor_for_virtual_machines_initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -310,7 +301,6 @@ module "mod_root_preview_deploy_azure_monitor_for_vm_initiative_assignment" {
 # Deploy Enable Azure Monitor for VMSS.
 module "mod_root_preview_deploy_azure_monitor_for_vmss_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.deploy_enable_azure_monitor_for_virtual_machines_scale_sets_initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -346,7 +336,6 @@ module "mod_root_preview_deploy_azure_monitor_for_vmss_initiative_assignment" {
 # Deploy Microsoft Defender for Endpoint agent on applicable images.
 module "mod_root_configure_cost_management_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = module.mod_deploy_cost_management_config_root_initiative.initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -381,7 +370,6 @@ module "mod_root_configure_cost_management_initiative_assignment" {
 
 module "mod_root_audit_aad_use_private_link_access_azure_services_def_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = module.mod_deploy_aad_config_root_initiative.initiative
   assignment_scope = data.azurerm_management_group.root.id
 
@@ -412,7 +400,6 @@ module "mod_root_audit_aad_use_private_link_access_azure_services_def_assignment
 # Deploy Configure Advanced Threat Protection to be enabled on Open Sources Databases.
 module "mod_root_preview_deploy_atp_for_open_source_dbs_initiative_assignment" {
   source           = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version          = "~> 2.0"
   initiative       = data.azurerm_policy_set_definition.deploy_configure_advanced_threat_protection_to_be_enabled_on_open_source_dbs_initiative
   assignment_scope = data.azurerm_management_group.root.id
 

@@ -15,7 +15,6 @@ AUTHOR/S: jspinella
 # Deploy Key Vault Policy Assignments
 module "mod_platforms_configure_azure_key_vault_initiative_assignment" {
   source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version             = "~> 2.0"
   initiative          = module.mod_platforms_configure_azure_key_vault_initiative.initiative
   assignment_scope    = data.azurerm_management_group.platforms.id
   assignment_location = var.default_location
@@ -55,7 +54,6 @@ module "mod_platforms_configure_azure_key_vault_initiative_assignment" {
 # Deploy Storage Account Policy Assignments
 module "mod_platforms_configure_azure_storage_account_initiative_assignment" {
   source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policySetAssignment/managementGroup"
-  version             = "~> 2.0"
   initiative          = module.mod_platforms_configure_storage_initiative.initiative
   assignment_scope    = data.azurerm_management_group.platforms.id
   assignment_location = var.default_location

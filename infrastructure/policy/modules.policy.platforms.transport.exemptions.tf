@@ -15,7 +15,6 @@ AUTHOR/S: jspinella
 # create exemptions by calling them explicitly from a local (as above)
 /* module "mod_exemption_transport_deny_public_ip" {
   source               = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyExemption/managementGroup"
-  version              = "~> 2.0"
   name                 = "Deny Public IP Exemption"
   display_name         = "Exempted due to Hub Placement"
   description          = "Allows Public IPs for Hub Subscription"

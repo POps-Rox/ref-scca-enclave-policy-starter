@@ -17,7 +17,6 @@ AUTHOR/S: jspinella
 # Configures all the Azure Monitor settings, such as Activity Log, Diagnostic Settings, and Log Analytics workspace
 module "mod_platforms_transport_deploy_azure_monitor_baseline_transport_initiative" {
   source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
-  version                 = "~> 2.0"
   initiative_name         = "deploy_monitoring_config"
   initiative_display_name = "Azure Monitor Baseline Alerts for Service Health for Transport"
   initiative_description  = "This policy set configures all the Azure Monitor Baseline Alerts for Service Health."
@@ -42,7 +41,6 @@ module "mod_platforms_transport_deploy_azure_monitor_baseline_transport_initiati
 # Configures all the Azure Logging settings, such as Log Analytics workspace
 module "mod_platforms_transport_logging_transport_initiative" {
   source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
-  version                 = "~> 2.0"
   initiative_name         = "deploy_logging_config"
   initiative_display_name = "Logging Governance for Operations"
   initiative_description  = "This policy set configures all the Azure Logging settings and guardrails, such as Log Analytics workspace retention and Law Agent and Custom Workspace"
@@ -66,7 +64,6 @@ module "mod_platforms_transport_logging_transport_initiative" {
 # Configures all the Azure Network settings, such as Network Security Groups, Azure Firewall, and DDoS Protection
 module "mod_platforms_transport_configure_network_configuration_initiative" {
   source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
-  version                 = "~> 2.0"
   initiative_name         = "deploy_network_config"
   initiative_display_name = "Network Governance for Transport"
   initiative_description  = "This policy set configures all the Azure Network settings and guardrails, such as Network Security Groups, Azure Firewall, and DDoS Protection"
@@ -99,7 +96,6 @@ module "mod_platforms_transport_configure_network_configuration_initiative" {
 # Configures all the Virtual Machine settings, such as VM Extensions, VM Diagnostics, and VM Encryption
 module "mod_platforms_transport_configure_virtual_machine_configuration_initiative" {
   source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
-  version                 = "~> 2.0"
   initiative_name         = "deploy_virtual_machine_config"
   initiative_display_name = "Virtual Machine Governance for DevSecOps"
   initiative_description  = "This policy set configures all the Virtual Machine settings and guardrails, such as VM Extensions, VM Diagnostics, and VM Encryption"
