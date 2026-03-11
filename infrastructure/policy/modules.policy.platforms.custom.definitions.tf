@@ -17,7 +17,7 @@ AUTHOR/S: jspinella
 ##################
 
 module "mod_platforms_network_configurations_policy_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "deny_publicip",

@@ -16,7 +16,7 @@ AUTHOR/S: jspinella
 
 # Configures all the Azure Monitor settings, such as Activity Log, Diagnostic Settings, and Log Analytics workspace
 module "mod_platforms_identity_deploy_azure_monitor_baseline_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_monitoring_config"
   initiative_display_name = "Azure Monitor Baseline Alerts for Service Health for Identity"
@@ -41,7 +41,7 @@ module "mod_platforms_identity_deploy_azure_monitor_baseline_initiative" {
 
 # Configures all the Azure Network settings, such as Network Security Groups, Azure Firewall, and DDoS Protection
 module "mod_platforms_identity_configure_network_configuration_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_network_config"
   initiative_display_name = "Network Governance for Identity"

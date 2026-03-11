@@ -18,7 +18,7 @@ AUTHOR/S: jspinella
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_general_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "audit_locks_on_networking",
@@ -35,7 +35,7 @@ module "mod_deploy_general_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_resource_diagnostic_setting_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "deploy_subscription_diagnostic_setting",
@@ -58,7 +58,7 @@ module "mod_deploy_resource_diagnostic_setting_root_definition" {
 
 #DenyAction
 module "mod_deploy_denyaction_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "deny_action_activity_logs",
@@ -75,7 +75,7 @@ module "mod_deploy_denyaction_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_defender_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "deploy_asc_security_contacts",
@@ -92,7 +92,7 @@ module "mod_deploy_defender_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_cost_management_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "deploy_budget",
@@ -110,7 +110,7 @@ module "mod_deploy_cost_management_root_definition" {
 ####################
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_sql_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "deploy_sql_security_alert_policies",
@@ -128,7 +128,7 @@ module "mod_deploy_sql_root_definition" {
 ####################
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_tags_root_definition" {
-  source  = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version = "~> 2.0"
   for_each = toset([
     "inherit_resource_group_tags_append",
@@ -144,42 +144,42 @@ module "mod_deploy_tags_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_aa_totaljob_alert_root_definition" {
-  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version             = "~> 2.0"
   file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_aa_totaljob_alert.json"
   management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_activitylog_la_del_root_definition" {
-  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version             = "~> 2.0"
   file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_activitylog_la_workspace_del.json"
   management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_activitylog_la_keyregen_root_definition" {
-  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version             = "~> 2.0"
   file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_activitylog_la_workspace_keyregen.json"
   management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_rv_backup_alert_root_definition" {
-  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version             = "~> 2.0"
   file_path           = "${path.cwd}/custompolicies/definitions/monitoring/modify_rsv_backuphealth_alert.json"
   management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_deploy_sa_availability_alert_root_definition" {
-  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version             = "~> 2.0"
   file_path           = "${path.cwd}/custompolicies/definitions/monitoring/deploy_storageaccount_availability_alert.json"
   management_group_id = data.azurerm_management_group.root.id
 }
 
 module "mod_audit_user_role_assignments_definition" {
-  source              = "azurenoops/overlays-policy/azurerm//modules/policyDefinition"
+  source              = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   version             = "~> 2.0"
   file_path           = "${path.cwd}/custompolicies/definitions/aad/audit_user_role_assignments.json"
   management_group_id = data.azurerm_management_group.root.id

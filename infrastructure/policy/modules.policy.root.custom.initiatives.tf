@@ -16,7 +16,7 @@ AUTHOR/S: jspinella
 
 # Configures all the General settings, such as Allowed Virtual Machine Sizes
 module "mod_deploy_general_config_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_general_config"
   initiative_display_name = "General Governance"
@@ -40,7 +40,7 @@ module "mod_deploy_general_config_root_initiative" {
 # Configures all the MDFC settings, such as Microsoft Defender for Cloud 
 # per individual service, security contacts, and export from MDFC to Log Analytics workspace
 module "mod_deploy_defender_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_MDFC_config"
   initiative_display_name = "Security Governance"
@@ -62,7 +62,7 @@ module "mod_deploy_defender_root_initiative" {
 
 # Configures all the Azure Monitor settings, such as Activity Log, Diagnostic Settings, and Log Analytics workspace
 module "mod_deploy_diagnostic_monitoring_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_monitoring_config"
   initiative_display_name = "Monitoring Governance"
@@ -96,7 +96,7 @@ module "mod_deploy_diagnostic_monitoring_root_initiative" {
 
 # Configures all the Cost Management settings, such as Budgets
 module "mod_deploy_cost_management_config_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_cost_management_config"
   initiative_display_name = "Cost Management Governance"
@@ -120,7 +120,7 @@ module "mod_deploy_cost_management_config_root_initiative" {
 
 # Configures all the SQL settings, such as SQL Security Alert Policies and SQL Auditing Settings
 module "mod_deploy_sql_config_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_sql_security_config"
   initiative_display_name = "SQL Security Governance"
@@ -148,7 +148,7 @@ module "mod_deploy_sql_config_root_initiative" {
 
 # Configures all the SQL settings, such as SQL Security Alert Policies and SQL Auditing Settings
 module "mod_deploy_aad_config_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_aad_config"
   initiative_display_name = "Identity and Access Management Governance"
@@ -174,7 +174,7 @@ module "mod_deploy_aad_config_root_initiative" {
 
 # Configures all the Tag settings, such as Tagging Standards
 module "mod_deploy_tags_root_initiative" {
-  source                  = "azurenoops/overlays-policy/azurerm//modules/policyInitiative"
+  source                  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyInitiative"
   version                 = "~> 2.0"
   initiative_name         = "deploy_tags_config"
   initiative_display_name = "Tagging Standards Governance"
