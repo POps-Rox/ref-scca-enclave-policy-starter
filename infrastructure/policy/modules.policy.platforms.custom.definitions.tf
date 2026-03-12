@@ -17,7 +17,7 @@ AUTHOR/S: jspinella
 ##################
 
 module "mod_platforms_network_configurations_policy_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "deny_publicip",
     "deny_mgmt_ports_from_internet",

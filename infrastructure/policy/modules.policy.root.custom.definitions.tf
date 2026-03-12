@@ -18,7 +18,7 @@ AUTHOR/S: jspinella
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_general_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "audit_locks_on_networking",
   ])
@@ -34,7 +34,7 @@ module "mod_deploy_general_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_resource_diagnostic_setting_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "deploy_subscription_diagnostic_setting",
     "deploy_virtual_machine_diagnostic_setting",
@@ -56,7 +56,7 @@ module "mod_deploy_resource_diagnostic_setting_root_definition" {
 
 #DenyAction
 module "mod_deploy_denyaction_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "deny_action_activity_logs",
     "deny_action_diagnostic_logs",
@@ -72,7 +72,7 @@ module "mod_deploy_denyaction_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_defender_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "deploy_asc_security_contacts",
     "deploy_export_asc_alerts_and_recom_to_law",
@@ -88,7 +88,7 @@ module "mod_deploy_defender_root_definition" {
 
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_cost_management_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "deploy_budget",
     "audit_disks_unused_resources",
@@ -105,7 +105,7 @@ module "mod_deploy_cost_management_root_definition" {
 ####################
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_sql_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "deploy_sql_security_alert_policies",
     "deploy_sql_auditingsettings",
@@ -122,7 +122,7 @@ module "mod_deploy_sql_root_definition" {
 ####################
 # create definitions by calling them explicitly from a local (as above)
 module "mod_deploy_tags_root_definition" {
-  source  = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
+  source = "github.com/POps-Rox/tf-az-overlays-policy//modules/policyDefinition"
   for_each = toset([
     "inherit_resource_group_tags_append",
   ])
