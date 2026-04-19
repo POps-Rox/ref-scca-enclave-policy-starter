@@ -62,7 +62,7 @@ As part of a default deployment configuration, policy and policy set definitions
 
 ![Architecture](./docs/images/MgmtGroups_Policies_v0.2.jpg)
 
-[click here](https://azurenoops.github.io/terraform-overlays-baseline/deployment/policy/policy-governance/) to see the sections below to learn more about the policy sets and policy set definitions applied at each level of the Management Group hierarchy.
+[click here](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/policy/policy-governance/) to see the sections below to learn more about the policy sets and policy set definitions applied at each level of the Management Group hierarchy.
 
 ## Deploy Manually with Terraform ##
 
@@ -75,7 +75,7 @@ The below scenario is how to get started on the Mission Enclave Policy implement
 Manual Deployment Details:
 | Deployment Methodology | Manual Deployment |
 |--------------|--------------|
-|Terraform|[Published](https://azurenoops.github.io/terraform-overlays-baseline/deployment/policy/policy-manual)
+|Terraform|[Published](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/policy/policy-manual)
 
 >NOTE: Using manual deployment to deploy the infrastructure using the Terraform CLI. This is a good option if you want to learn how to deploy the infrastructure using Terraform CLI.
 
@@ -90,7 +90,7 @@ The below scenario is how to get started on the Mission Enclave Policy implement
 E2E GitHub Deployment Details:
 | Deployment Methodology | GitHub Actions | Azure DevOps |
 |--------------|--------------|--------------|
-|Terraform|[In Progress](.https://azurenoops.github.io/terraform-overlays-baseline/deployment/policy/policy-github)| Coming soon |
+|Terraform|[In Progress](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/policy/policy-github)| Coming soon |
 
 ## Importance of Separation of Duties (Azure NoOps Shared Responsibility Model) ##
 

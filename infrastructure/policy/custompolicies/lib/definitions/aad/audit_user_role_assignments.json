@@ -9,7 +9,7 @@
         "metadata": {
             "version": "1.0.0",
             "category": "Azure Active Directory",
-            "source": "https://github.com/azurenoops/",
+            "source": "https://github.com/POps-Rox/",
             "anoaCloudEnvironments": [
                 "AzureCloud",
                 "AzureUSGovernment"
