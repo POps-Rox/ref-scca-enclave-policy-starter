@@ -1,6 +1,6 @@
 # Azure NoOps Mission Enclave Policy Terraform Modules
 
-This folder contains the Terraform Modules for deploying Mission Enclave Policy Starter. See the [Deployment Guide for Terraform](https://azurenoops.github.io/terraform-overlays-baseline/deployment/policy/policy-manual/) for detailed instructions on how to use the Modules.
+This folder contains the Terraform Modules for deploying Mission Enclave Policy Starter. See the [Deployment Guide for Terraform](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/policy/policy-manual/) for detailed instructions on how to use the Modules.
 
 > Please refer to [Policy Driven Governance](https://learn.microsoft.com/en-gb/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) for further information.
 
@@ -8,7 +8,7 @@ This folder contains the Terraform Modules for deploying Mission Enclave Policy 
 
 ## FAQ
 
-- We have added a dedicated [Azure NoOps Mission Enclave Policy starter FAQ](https://azurenoops.github.io/terraform-overlays-baseline/deployment/policy/policy-faq/) based on common issues raised or questions asked by customers and partners. Please review this section before raising an issue.
+- We have added a dedicated [Azure NoOps Mission Enclave Policy starter FAQ](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/policy/policy-faq/) based on common issues raised or questions asked by customers and partners. Please review this section before raising an issue.
 
 ## Mission Enclave landing zones policies (Custom & Built-in)
 
@@ -22,6 +22,6 @@ The subsequent sections will provide a summary of policy sets and policy set def
 
 ## Policies included
 
-There are around 12 custom Azure Policy Definitions included that are used from the [Azure NoOps Policy Overlay module](https://github.com/azurenoops/terraform-azurerm-overlays-policy) and around 12 Custom Azure Policy Initiatives included as part of the Azure NoOps Mission Enclave Policy starter implementation that adds on to those already built-in within each Azure customers tenant.
+There are around 12 custom Azure Policy Definitions included that are used from the [Azure NoOps Policy Overlay module](https://github.com/POps-Rox/tf-az-overlays-policy) and around 12 Custom Azure Policy Initiatives included as part of the Azure NoOps Mission Enclave Policy starter implementation that adds on to those already built-in within each Azure customers tenant.
 
 > Our goal is always to try and use built-in policies where available and also work with product teams to adopt our custom policies and make them built-in, which takes time. This means there will always be a requirement for custom policies.
